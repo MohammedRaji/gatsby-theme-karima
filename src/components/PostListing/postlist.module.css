@@ -1,0 +1,126 @@
+.blogBbox {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    grid-gap: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.postLabel {
+    font-size: 12px;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f24545;
+}
+
+.itemTitle {
+    font: bold 42px Josefin Sans;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.itemImg img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    object-fit: cover;
+    height: 400px !important;
+}
+
+.postMeta {
+    font: bold 14px Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    display: inline-block;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.postAuthor {
+    position: relative;
+    margin-bottom: 0;
+    padding-right: 30px;
+}
+.postAuthor:after {
+    content: "";
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    border-top: 1px solid #cecbd2;
+    right: 0;
+}
+.postDate {
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+.excerpt{
+font: normal normal 16px Open Sans;
+    line-height: 27px;
+    color: #444444;
+    margin: 0 auto 13px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.postMore {
+    margin-top: 25px;
+}
+.link{
+color: #111;
+text-transform: capitalize;
+    
+}
+
+.arrowIcon{
+    position: relative;
+    stroke-width: 1.3;
+    stroke-miterlimit: 10;
+    stroke: #111;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    top: -1px;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    vertical-align: middle;
+}
+
+.arrowIconCircle {
+transition: stroke-dashoffset .3s ease;
+stroke-dasharray: 95;
+stroke-dashoffset: 95
+}
+.link:hover .arrowIcon {
+-webkit-transform: translate3d(5px, 0, 0);
+transform: translate3d(5px, 0, 0)
+}
+.link:hover .arrowIconCircle {
+stroke-dashoffset: 0
+}
+
+.imgg{
+    height: 400px !important;
+}
