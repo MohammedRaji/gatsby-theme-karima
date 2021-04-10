@@ -1,8 +1,9 @@
 import React, {useState } from "react"
 import { Link, graphql } from "gatsby"
 
-const BlogIndex = props => {
-  const { data } = props
+const SearchPage = ({data}) => {
+
+  //const { data } = props
   const allPosts = data.allMarkdownRemark.edges
 
   const emptyQuery = ""
@@ -16,7 +17,7 @@ const BlogIndex = props => {
   const handleInputChange = event => {
     console.log(event.target.value)
     const query = event.target.value
-    const { data } = props
+    //const { data } = props
 
     const posts = data.allMarkdownRemark.edges || []
     
@@ -45,15 +46,17 @@ const BlogIndex = props => {
   const posts = hasSearchResults ? filteredData : allPosts
 
   return (
-    <>
+    <div className="container" >
+    <button className="close"><svg width="28" height="28" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" ratio="2"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
       <h1 style={{ textAlign: `center` }}>Writing</h1>
 
+<div className="searchPage">
       <div className="searchBox">
         <input
           className="searchInput"
           type="text"
           aria-label="Search"
-          placeholder="Type to filter posts..."
+          placeholder="Search this blog..."
           onChange={handleInputChange}
         />
       </div>
@@ -87,11 +90,12 @@ const BlogIndex = props => {
           </article>
         )
       })}
-    </>
+      </div>
+    </div>
   )
 }
 
-export default BlogIndex
+export default SearchPage
 
 export const pageQuery = graphql`
   query {

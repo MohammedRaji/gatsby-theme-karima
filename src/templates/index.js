@@ -5,16 +5,20 @@ import Layout from '../components/Layout/layout'
 import PostListing from "../components/PostListing/PostListing";
 import Sidebar from "../components/Sidebar/Sidebar";
 
+const IndexPage = ({pageContext,data})=> {
 
-
-const IndexPage = ({data})=> {
 const postEdges = data.allMarkdownRemark.edges;
+
   return (
       <Layout>
       
       <section className="sectionStyles container">
-      	<PostListing postEdges={postEdges} />
+      <div>
+      	<PostListing postEdges={postEdges} pageContext={pageContext}/>
+      	
+      	</div>
       	<Sidebar/>
+      	
       </section>
       </Layout>
   )

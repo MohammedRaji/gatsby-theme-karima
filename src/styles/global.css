@@ -111,3 +111,31 @@ ul, li {
 #footer .socialItem a:hover svg{
     fill: #161616;
 }
+
+
+/*search*/
+.searchPage {
+    max-width: 600px;
+}
+.searchInput {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+    border: 0;
+    border-bottom: 2px solid #ececec;
+    height: 50px;
+    padding: 0;
+    height: 50px;
+    background: transparent;
+    font-size: 25px;
+    color: #000000;
+    border: 0;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+    outline: 0;
+    width: 100%;
+}
+
+searchInput:focus {
+    outline: 0;
+}
+

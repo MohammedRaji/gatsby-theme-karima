@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage,StaticImage } from "gatsby-plugin-image"
+import PaginationLinks from '../PaginationLink/PaginationLinks'
 import * as styles from "./postlist.module.css"
 
-function PostListing({ postEdges }) {
+function PostListing(props) {
   const postList = [];
-  postEdges.forEach((postEdge) => {
+  props.postEdges.forEach((postEdge) => {
     postList.push({
       path: postEdge.node.fields.slug,
       category: postEdge.node.frontmatter.category,
@@ -19,6 +20,7 @@ function PostListing({ postEdges }) {
       thumbnail: postEdge.node.frontmatter.featured
     });
   });
+const { currentPage, numberOfPages } = props.pageContext;
 
   return (
     <main>
@@ -69,6 +71,8 @@ Read more
     </article>
         ))
       }
+       
+      <PaginationLinks currentPage={currentPage} numberOfPages={numberOfPages} />
     </main>
   );
 }

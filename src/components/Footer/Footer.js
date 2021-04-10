@@ -1,7 +1,7 @@
 import React from "react";
 
 import SocialLinks from "../SocialLinks/sociallinks";
-import {FooterMenu} from "../Menu/menu"
+//import {FooterMenu} from "../Menu/menu"
 import * as styles from "./footer.module.css"
 
 function Footer({ config }) {
@@ -13,7 +13,7 @@ function Footer({ config }) {
  	<footer className={styles.footer } id="footer">
 		<div className={`${styles.container} ${styles.widget}`}>
        		<SocialLinks/>
-            <FooterMenu/>
+            {/*<FooterMenu/>*/}
 		</div>
 
 		<div className={styles.copyrights}>
